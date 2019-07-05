@@ -9,8 +9,11 @@
 //fetching from json
 fetch('/random-quotes-vanillajs-json/data/quotes.json') // Call the fetch function passing the url of the API as a parameter
 .then(response =>  {
-    console.log(response.json())    
+    console.log(response)    
 });
+// .then(response =>  {
+//     console.log(response.json())    
+// });
 
 
 //function to access random quote from array and inject it together with author on HTML
