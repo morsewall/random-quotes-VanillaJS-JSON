@@ -7,7 +7,7 @@
 // ];
 
 //fetching from json
-fetch('/data/quotes.json') // Call the fetch function passing the url of the API as a parameter
+fetch('/random-quotes-vanillajs-json//data/quotes.json') // Call the fetch function passing the url of the API as a parameter
 .then(response =>  {
     console.log(response) // Your code for handling the data you get from the API
 });
