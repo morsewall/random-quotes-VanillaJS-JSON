@@ -8,12 +8,8 @@
 
 //fetching from json
 fetch('/random-quotes-vanillajs-json/data/quotes.json') // Call the fetch function passing the url of the API as a parameter
-.then(response =>  {
-    response.json()    
-})
-.then(data =>  {
-    console.log(data)    
-});
+.then(response => response.json())    
+.then(responseJSON => console.log(responseJSON));
 
 //defining an array for the quotes
 // const quotes = JSON.parse(data);
