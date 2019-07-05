@@ -2,13 +2,13 @@
 // alert("Hello! I am an alert box!!");
 
 //fetching from json
-fetch('/random-quotes-vanillajs-json/data/quotes.json') // Call the fetch function passing the url of the API as a parameter
+const request = fetch('/random-quotes-vanillajs-json/data/quotes.json') // Call the fetch function passing the url of the API as a parameter
 .then(response => response.json())    
 .then(responseJSON => console.log(responseJSON));
 
-//defining an array for the quotes
-const quotes = JSON.parse(responseJSON);
-console.log(quotes);
+//convert JSON to an array with the quotes
+const quotes = JSON.parse(request);
+console.log(request);
 
 //function to access random quote from array and inject it together with author on HTML
 function injectQuote() {
