@@ -1,14 +1,14 @@
 "use strict";
 // alert("Hello! I am an alert box!!");
 
-//fetching from json
-const request = fetch('/random-quotes-vanillajs-json/data/quotes.json') // Call the fetch function passing the url of the API as a parameter
+//fetching data from JSON file
+const quotes = fetch('/random-quotes-vanillajs-json/data/quotes.json') // Call the fetch function passing the url of the API as a parameter
 .then(response => response.json())    
 .then(responseJSON => console.log(responseJSON));
 
-//convert JSON to an array with the quotes
-const quotes = JSON.parse(request);
-console.log(request);
+//convert JSON data to an array with the quotes
+// const quotes = JSON.parse(request);
+console.log(quotes);
 
 //function to access random quote from array and inject it together with author on HTML
 function injectQuote() {
