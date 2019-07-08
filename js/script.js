@@ -3,14 +3,19 @@
 
 let quotes;
 
-//fetching data from JSON file
-fetch('/random-quotes-vanillajs-json/data/quotes.json') // Call the fetch function passing the url of the API as a parameter
-.then(response => response.json())    
-// .then(responseJSON => console.log(responseJSON))
-.then(responseJSON => quotes = responseJSON)
-.then(quotes => console.log(quotes))
-.then(console.trace())
-.then(injectQuote());
+const responseJSON = await fetch('/random-quotes-vanillajs-json/data/quotes.json');
+const quotes = await responseJSON.json();
+console.log(quotes);
+
+
+// //fetching data from JSON file
+// fetch('/random-quotes-vanillajs-json/data/quotes.json') // Call the fetch function passing the url of the API as a parameter
+// .then(response => response.json())    
+// // .then(responseJSON => console.log(responseJSON))
+// .then(responseJSON => quotes = responseJSON)
+// .then(quotes => console.log(quotes))
+// .then(console.trace())
+// .then(injectQuote());
 
 //convert JSON data to an array with the quotes
 // const quotes = JSON.parse(request);
