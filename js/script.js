@@ -1,14 +1,16 @@
 "use strict";
 // alert("Hello! I am an alert box!!");
 
+let quotes;
 
 const makeRequest = async () => {
     const responseJSON = await fetch('/random-quotes-vanillajs-json/data/quotes.json');
-    const quotes = await responseJSON.json();
+    quotes = await responseJSON.json();
     console.log(quotes);
 }
   
   makeRequest();
+  console.log(quotes);
 
 // const responseJSON = await fetch('/random-quotes-vanillajs-json/data/quotes.json');
 // const quotes = await responseJSON.json();
