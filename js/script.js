@@ -1,7 +1,7 @@
 "use strict";
 // alert("Hello! I am an alert box!!");
 
-const quotes;
+let quotes;
 
 //fetching data from JSON file
 fetch('/random-quotes-vanillajs-json/data/quotes.json') // Call the fetch function passing the url of the API as a parameter
