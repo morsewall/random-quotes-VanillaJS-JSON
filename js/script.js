@@ -56,7 +56,7 @@ function injectQuote() {
 };
 
 // inject a quote on screen when app loads
-// injectQuote();
+injectQuote();
 
 //inject a quote on screen when "Get New Quote" button is clicked
 document.getElementById('new-quote').addEventListener('click', function() {injectQuote();});
