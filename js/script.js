@@ -1,11 +1,20 @@
 "use strict";
 // alert("Hello! I am an alert box!!");
 
-let quotes;
 
-const responseJSON = await fetch('/random-quotes-vanillajs-json/data/quotes.json');
-const quotes = await responseJSON.json();
-console.log(quotes);
+const makeRequest = async () => {
+    const responseJSON = await fetch('/random-quotes-vanillajs-json/data/quotes.json');
+    const quotes = await responseJSON.json();
+    console.log(quotes);
+    injectQuote();
+
+}
+  
+  makeRequest();
+
+// const responseJSON = await fetch('/random-quotes-vanillajs-json/data/quotes.json');
+// const quotes = await responseJSON.json();
+// console.log(quotes);
 
 
 // //fetching data from JSON file
@@ -52,4 +61,4 @@ function injectQuote() {
 //inject a quote on screen when "Get New Quote" button is clicked
 document.getElementById('new-quote').addEventListener('click', function() {injectQuote();});
 
-console.trace();
+// console.trace();
