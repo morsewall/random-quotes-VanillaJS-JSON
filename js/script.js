@@ -9,8 +9,8 @@ const makeRequest = async () => {
     console.log(quotes);
 }
   
-  makeRequest();
-  console.log(quotes);
+//   makeRequest();
+//   console.log(quotes);
 
 // const responseJSON = await fetch('/random-quotes-vanillajs-json/data/quotes.json');
 // const quotes = await responseJSON.json();
@@ -56,7 +56,7 @@ function injectQuote() {
 };
 
 // inject a quote on screen when app loads
-injectQuote();
+makeRequest().then(result => injectQuote());
 
 //inject a quote on screen when "Get New Quote" button is clicked
 document.getElementById('new-quote').addEventListener('click', function() {injectQuote();});
