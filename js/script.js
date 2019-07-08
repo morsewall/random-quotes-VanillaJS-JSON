@@ -6,8 +6,6 @@ const makeRequest = async () => {
     const responseJSON = await fetch('/random-quotes-vanillajs-json/data/quotes.json');
     const quotes = await responseJSON.json();
     console.log(quotes);
-    injectQuote();
-
 }
   
   makeRequest();
