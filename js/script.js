@@ -5,7 +5,7 @@
 fetch('/random-quotes-vanillajs-json/data/quotes.json') // Call the fetch function passing the url of the API as a parameter
 .then(response => response.json())    
 // .then(responseJSON => console.log(responseJSON))
-.then(responseJSON => quotes)
+.then(responseJSON => quotes = responseJSON)
 .then(injectQuote());
 
 //convert JSON data to an array with the quotes
