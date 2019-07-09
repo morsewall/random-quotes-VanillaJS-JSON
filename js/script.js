@@ -1,34 +1,19 @@
 "use strict";
 // alert("Hello! I am an alert box!!");
 
+// array to be populated with JSON content
 let quotes;
 
-const makeRequest = async () => {
-    const responseJSON = await fetch('/random-quotes-vanillajs-json/data/quotes.json');
-    quotes = await responseJSON.json();
-    console.log(quotes);
+// //asynchronous function that fetches JSON content and populates the quotes array
+// const makeRequest = async () => {
+//     const responseJSON = await fetch('/random-quotes-vanillajs-json/data/quotes.json');
+//     quotes = await responseJSON.json();
+// }
+
+//asynchronous function that fetches JSON content and populates the quotes array
+function makeRequest() {
+    fetch('/random-quotes-vanillajs-json/data/quotes.json').then(responseJSON => quotes = responseJSON.json());
 }
-  
-//   makeRequest();
-//   console.log(quotes);
-
-// const responseJSON = await fetch('/random-quotes-vanillajs-json/data/quotes.json');
-// const quotes = await responseJSON.json();
-// console.log(quotes);
-
-
-// //fetching data from JSON file
-// fetch('/random-quotes-vanillajs-json/data/quotes.json') // Call the fetch function passing the url of the API as a parameter
-// .then(response => response.json())    
-// // .then(responseJSON => console.log(responseJSON))
-// .then(responseJSON => quotes = responseJSON)
-// .then(quotes => console.log(quotes))
-// .then(console.trace())
-// .then(injectQuote());
-
-//convert JSON data to an array with the quotes
-// const quotes = JSON.parse(request);
-// console.log(quotes);
 
 //function to access random quote from array and inject it together with author on HTML
 function injectQuote() {
@@ -55,7 +40,7 @@ function injectQuote() {
   } 
 };
 
-// inject a quote on screen when app loads
+// inject a quote on screen when app loads (only after the array was populated with the fetch from JSON)
 makeRequest().then(result => injectQuote());
 
 //inject a quote on screen when "Get New Quote" button is clicked
