@@ -7,7 +7,7 @@ let quotes;
 //asynchronous function that fetches JSON content and populates the quotes array
 const makeRequest = async () => {
     const responseJSON = await fetch('/random-quotes-vanillajs-json/data/quotes.json');
-    quotes = responseJSON.json();
+    quotes = await responseJSON.json();
 }
 
 //function to access random quote from array and inject it together with author on HTML
