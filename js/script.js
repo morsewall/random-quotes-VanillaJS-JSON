@@ -4,15 +4,10 @@
 // array to be populated with JSON content
 let quotes;
 
-// //asynchronous function that fetches JSON content and populates the quotes array
-// const makeRequest = async () => {
-//     const responseJSON = await fetch('/random-quotes-vanillajs-json/data/quotes.json');
-//     quotes = await responseJSON.json();
-// }
-
 //asynchronous function that fetches JSON content and populates the quotes array
-function makeRequest() {
-    fetch('/random-quotes-vanillajs-json/data/quotes.json').then(responseJSON => console.log(responseJSON.type));
+const makeRequest = async () => {
+    const responseJSON = await fetch('/random-quotes-vanillajs-json/data/quotes.json');
+    quotes = responseJSON.json();
 }
 
 //function to access random quote from array and inject it together with author on HTML
