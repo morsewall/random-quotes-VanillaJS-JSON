@@ -28,10 +28,10 @@ function injectQuote() {
     let extraCharCount = extraStylingChar.length;
     let subString = quoteTextElem.substring(0, 280 - extraCharCount - charCountAuthor) + extraStylingChar + quoteAuthorElem;
     //generate url available for Twitter intent and inject url on HTML
-  document.getElementById('tweet-quote').href = "https://twitter.com/intent/tweet?text=" + subString;
+    document.getElementById('tweet-quote').href = "https://twitter.com/intent/tweet?text=" + subString;
   } else {
-   //generate url available for Twitter intent and inject url on HTML
-  document.getElementById('tweet-quote').href = "https://twitter.com/intent/tweet?text=" + contentQuote;
+    //generate url available for Twitter intent and inject url on HTML
+    document.getElementById('tweet-quote').href = "https://twitter.com/intent/tweet?text=" + contentQuote;
   } 
 };
 
