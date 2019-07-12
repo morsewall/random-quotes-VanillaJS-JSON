@@ -8,7 +8,7 @@ let quotes;
 const makeRequest = async () => {
     const responseJSON = await fetch('/random-quotes-vanillajs-json/data/quotes.json');
     // quotes = await responseJSON.json();
-    quotes = await responseJSON.json();
+    quotes = responseJSON.json();
 
 }
 
