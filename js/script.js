@@ -36,7 +36,9 @@ function injectQuote() {
 };
 
 // inject a quote on screen when app loads (but only after the array was populated with the fetch from JSON)
-makeRequest().then(result => injectQuote());
+// makeRequest().then(result => injectQuote());
+makeRequest();
+injectQuote();
 
 //inject a quote on screen when "Get New Quote" button is clicked
 document.getElementById('new-quote').addEventListener('click', function() {injectQuote();});
